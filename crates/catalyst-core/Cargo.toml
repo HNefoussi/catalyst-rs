@@ -1,0 +1,9 @@
+[package]
+name = "catalyst-core"
+description = "Core logical plans, expressions, schemas, and tree abstractions for Catalyst-RS"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+
+[dependencies]

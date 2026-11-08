@@ -1,0 +1,17 @@
+[workspace]
+resolver = "2"
+members = [
+    "crates/catalyst-core",
+    "crates/catalyst-optimizer",
+    "crates/catalyst-cli",
+]
+
+[workspace.package]
+version = "0.1.0"
+edition = "2021"
+rust-version = "1.75"
+license = "MIT"
+
+[workspace.dependencies]
+catalyst-core = { path = "crates/catalyst-core" }
+catalyst-optimizer = { path = "crates/catalyst-optimizer" }

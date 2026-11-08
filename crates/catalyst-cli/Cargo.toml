@@ -1,0 +1,15 @@
+[package]
+name = "catalyst-cli"
+description = "Runnable demo for the Catalyst-RS optimizer"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+
+[[bin]]
+name = "catalyst"
+path = "src/main.rs"
+
+[dependencies]
+catalyst-core.workspace = true
+catalyst-optimizer.workspace = true
