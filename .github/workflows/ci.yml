@@ -1,7 +1,6 @@
 name: CI
 
 on:
-  push:
   pull_request:
 
 jobs:
@@ -9,6 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - uses: taiki-e/install-action@cargo-machete
       - uses: dtolnay/rust-toolchain@stable
         with:
           components: rustfmt, clippy
@@ -16,5 +16,7 @@ jobs:
         run: cargo fmt --all -- --check
       - name: Lint
         run: cargo clippy --workspace --all-targets -- -D warnings
+      - name: machete
+        run: cargo machete
       - name: Test
         run: cargo test --workspace
